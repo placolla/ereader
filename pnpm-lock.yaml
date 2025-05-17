@@ -119,6 +119,9 @@ importers:
       dropbox:
         specifier: 10.32.0
         version: 10.32.0(@types/node-fetch@2.6.12)
+      epubjs:
+        specifier: 0.3.93
+        version: 0.3.93
       file-saver:
         specifier: 2.0.5
         version: 2.0.5
@@ -1450,48 +1453,56 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@next/swc-linux-arm64-gnu@12.3.4':
     resolution: {integrity: sha512-kiX0vgJGMZVv+oo1QuObaYulXNvdH/IINmvdZnVzMO/jic/B8EEIGlZ8Bgvw8LCjH3zNVPO3mGrdMvnEEPEhKA==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@next/swc-linux-arm64-musl@12.1.5':
     resolution: {integrity: sha512-KgPjwdbhDqXI7ghNN8V/WAiLquc9Ebe8KBrNNEL0NQr+yd9CyKJ6KqjayVkmX+hbHzbyvbui/5wh/p3CZQ9xcQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@next/swc-linux-arm64-musl@12.3.4':
     resolution: {integrity: sha512-EETZPa1juczrKLWk5okoW2hv7D7WvonU+Cf2CgsSoxgsYbUCZ1voOpL4JZTOb6IbKMDo6ja+SbY0vzXZBUMvkQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@next/swc-linux-x64-gnu@12.1.5':
     resolution: {integrity: sha512-O2ErUTvCJ6DkNTSr9pbu1n3tcqykqE/ebty1rwClzIYdOgpB3T2MfEPP+K7GhUR87wmN/hlihO9ch7qpVFDGKw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@next/swc-linux-x64-gnu@12.3.4':
     resolution: {integrity: sha512-4csPbRbfZbuWOk3ATyWcvVFdD9/Rsdq5YHKvRuEni68OCLkfy4f+4I9OBpyK1SKJ00Cih16NJbHE+k+ljPPpag==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@next/swc-linux-x64-musl@12.1.5':
     resolution: {integrity: sha512-1eIlZmlO/VRjxxzUBcVosf54AFU3ltAzHi+BJA+9U/lPxCYIsT+R4uO3QksRzRjKWhVQMRjEnlXyyq5SKJm7BA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@next/swc-linux-x64-musl@12.3.4':
     resolution: {integrity: sha512-YeBmI+63Ro75SUiL/QXEVXQ19T++58aI/IINOyhpsRL1LKdyfK/35iilraZEFz9bLQrwy1LYAR5lK200A9Gjbg==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@next/swc-win32-arm64-msvc@12.1.5':
     resolution: {integrity: sha512-oromsfokbEuVb0CBLLE7R9qX3KGXucZpsojLpzUh1QJjuy1QkrPJncwr8xmWQnwgtQ6ecMWXgXPB+qtvizT9Tw==}
@@ -3348,6 +3359,9 @@ packages:
   entities@4.5.0:
     resolution: {integrity: sha512-V0hjH4dGPh9Ao5p0MoRY6BVqtwCjhz6vI5LT8AJ55H+4g9/4vbHx1I54fS0XuclLhDHArPQCiMjDxjaL8fPxhw==}
     engines: {node: '>=0.12'}
+
+  epubjs@0.3.93:
+    resolution: {integrity: sha512-c06pNSdBxcXv3dZSbXAVLE1/pmleRhOT6mXNZo6INKmvuKpYB65MwU/lO7830czCtjIiK9i+KR+3S+p0wtljrw==}
 
   errno@0.1.8:
     resolution: {integrity: sha512-dJ6oBr5SQ1VSd9qkk7ByRgb/1SH4JZjCHSW/mr63/QcXO9zLVxvJ6Oy13nio03rxpSnVDDjFor75SjVeZWPW/A==}
@@ -8460,7 +8474,7 @@ snapshots:
       '@babel/traverse': 7.26.5
       '@babel/types': 7.26.5
       convert-source-map: 1.9.0
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       lodash: 4.17.21
@@ -8483,7 +8497,7 @@ snapshots:
       '@babel/traverse': 7.26.5
       '@babel/types': 7.26.5
       convert-source-map: 2.0.0
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -8541,7 +8555,7 @@ snapshots:
       '@babel/core': 7.26.0
       '@babel/helper-compilation-targets': 7.26.5
       '@babel/helper-plugin-utils': 7.26.5
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       lodash.debounce: 4.0.8
       resolve: 1.22.10
     transitivePeerDependencies:
@@ -9223,7 +9237,7 @@ snapshots:
       '@babel/parser': 7.26.5
       '@babel/template': 7.25.9
       '@babel/types': 7.26.5
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -9486,7 +9500,7 @@ snapshots:
   '@eslint/eslintrc@1.4.1':
     dependencies:
       ajv: 6.12.6
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       espree: 9.6.1
       globals: 13.24.0
       ignore: 5.3.2
@@ -9504,7 +9518,7 @@ snapshots:
   '@humanwhocodes/config-array@0.9.5':
     dependencies:
       '@humanwhocodes/object-schema': 1.2.1
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       minimatch: 3.1.2
     transitivePeerDependencies:
       - supports-color
@@ -10034,7 +10048,7 @@ snapshots:
       '@typescript-eslint/scope-manager': 5.19.0
       '@typescript-eslint/type-utils': 5.19.0(eslint@8.13.0)(typescript@4.6.3)
       '@typescript-eslint/utils': 5.19.0(eslint@8.13.0)(typescript@4.6.3)
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       eslint: 8.13.0
       functional-red-black-tree: 1.0.1
       ignore: 5.3.2
@@ -10051,7 +10065,7 @@ snapshots:
       '@typescript-eslint/scope-manager': 5.10.1
       '@typescript-eslint/types': 5.10.1
       '@typescript-eslint/typescript-estree': 5.10.1(typescript@4.6.3)
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       eslint: 8.13.0
     optionalDependencies:
       typescript: 4.6.3
@@ -10071,7 +10085,7 @@ snapshots:
   '@typescript-eslint/type-utils@5.19.0(eslint@8.13.0)(typescript@4.6.3)':
     dependencies:
       '@typescript-eslint/utils': 5.19.0(eslint@8.13.0)(typescript@4.6.3)
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       eslint: 8.13.0
       tsutils: 3.21.0(typescript@4.6.3)
     optionalDependencies:
@@ -10087,7 +10101,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 5.10.1
       '@typescript-eslint/visitor-keys': 5.10.1
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.6.3
@@ -10101,7 +10115,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 5.19.0
       '@typescript-eslint/visitor-keys': 5.19.0
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.6.3
@@ -10314,7 +10328,7 @@ snapshots:
 
   agent-base@6.0.2:
     dependencies:
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -11890,6 +11904,18 @@ snapshots:
   entities@4.5.0:
     optional: true
 
+  epubjs@0.3.93:
+    dependencies:
+      '@types/localforage': 0.0.34
+      '@xmldom/xmldom': 0.7.13
+      core-js: 3.40.0
+      event-emitter: 0.3.5
+      jszip: 3.10.1
+      localforage: 1.10.0
+      lodash: 4.17.21
+      marks-pane: 1.0.9
+      path-webpack: 0.0.3
+
   errno@0.1.8:
     dependencies:
       prr: 1.0.1
@@ -12061,7 +12087,7 @@ snapshots:
 
   esbuild-register@3.6.0(esbuild@0.24.2):
     dependencies:
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       esbuild: 0.24.2
     transitivePeerDependencies:
       - supports-color
@@ -12180,7 +12206,7 @@ snapshots:
 
   eslint-import-resolver-typescript@2.4.0(eslint-plugin-import@2.25.2)(eslint@8.13.0):
     dependencies:
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       eslint: 8.13.0
       eslint-plugin-import: 2.25.2(@typescript-eslint/parser@5.10.1(eslint@8.13.0)(typescript@4.6.3))(eslint-import-resolver-typescript@2.4.0)(eslint@8.13.0)
       glob: 7.2.3
@@ -12311,7 +12337,7 @@ snapshots:
       ajv: 6.12.6
       chalk: 4.1.2
       cross-spawn: 7.0.6
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       doctrine: 3.0.0
       escape-string-regexp: 4.0.0
       eslint-scope: 7.2.2
@@ -13273,7 +13299,7 @@ snapshots:
   https-proxy-agent@5.0.1:
     dependencies:
       agent-base: 6.0.2
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -14063,7 +14089,7 @@ snapshots:
   log4js@6.9.1:
     dependencies:
       date-format: 4.0.14
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       flatted: 3.3.2
       rfdc: 1.4.1
       streamroller: 3.1.5
@@ -14631,7 +14657,7 @@ snapshots:
 
   micromark@2.11.4:
     dependencies:
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       parse-entities: 2.0.0
     transitivePeerDependencies:
       - supports-color
@@ -14639,7 +14665,7 @@ snapshots:
   micromark@3.2.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       decode-named-character-reference: 1.0.2
       micromark-core-commonmark: 1.1.0
       micromark-factory-space: 1.1.0
@@ -16782,7 +16808,7 @@ snapshots:
   streamroller@3.1.5:
     dependencies:
       date-format: 4.0.14
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       fs-extra: 8.1.0
     transitivePeerDependencies:
       - supports-color
@@ -17271,7 +17297,7 @@ snapshots:
       bundle-require: 3.1.2(esbuild@0.14.54)
       cac: 6.7.14
       chokidar: 3.6.0
-      debug: 4.4.0(supports-color@9.4.0)
+      debug: 4.4.0(supports-color@6.1.0)
       esbuild: 0.14.54
       execa: 5.1.1
       globby: 11.1.0

@@ -12,7 +12,7 @@ body,
 .checkbox,
 .textfield,
 select {
-  @apply ring-surface-variant ring-1 ring-inset;
+  @apply ring-1 ring-inset ring-surface-variant;
 }
 
 .textfield:focus-within,
@@ -20,7 +20,7 @@ select:focus-visible,
 button:focus-visible,
 a:focus-visible {
   outline: none;
-  @apply ring-primary70 ring-1 ring-inset;
+  @apply ring-1 ring-inset ring-primary70;
 }
 
 input:focus-visible,
@@ -88,7 +88,7 @@ p {
   content: '';
   flex-grow: 1;
   width: 100%;
-  @apply bg-surface-variant h-px;
+  @apply h-px bg-surface-variant;
 }
 
 .progress-bit {

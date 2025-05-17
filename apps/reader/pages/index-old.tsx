@@ -1,5 +1,6 @@
 import ePub from 'epubjs'
 import { useEffect, useState } from 'react'
+// @ts-ignore
 
 type Book = {
   title: string
@@ -12,29 +13,42 @@ export default function Reader() {
   useEffect(() => {
     fetch('/api/books')
       .then((res) => res.json())
-      .then((data) => setBooks(data))
+      .then((data: Book[]) => setBooks(data))
   }, [])
 
   useEffect(() => {
     books.forEach((book, index) => {
-      const epub = ePub(book.file)
-      const rendition = epub.renderTo(`viewer-${index}`, {
+      const viewerId = `viewer-${index}`
+      const container = document.getElementById(viewerId)
+      if (!container) return
+
+      container.innerHTML = '' // clear previous renders
+
+      const bookInstance = ePub(book.file)
+      const rendition = bookInstance.renderTo(container, {
         width: '100%',
-        height: '500px',
+        height: 600,
+        spread: 'always',
       })
+
       rendition.display()
     })
   }, [books])
 
   return (
     <div style={{ padding: '2rem' }}>
-      <h1 style={{ marginBottom: '2rem' }}>📚 Available Books</h1>
+      <h1 style={{ fontSize: '2rem' }}>📚 Available Books</h1>
       {books.map((book, index) => (
         <div key={book.file} style={{ marginBottom: '3rem' }}>
           <h2>{book.title}</h2>
           <div
             id={`viewer-${index}`}
-            style={{ border: '1px solid #ccc', height: '500px' }}
+            style={{
+              border: '1px solid #ccc',
+              height: '600px',
+              width: '100%',
+              overflow: 'hidden',
+            }}
           />
         </div>
       ))}

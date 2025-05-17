@@ -2,10 +2,10 @@
 module.exports = {
   darkMode: 'class',
   content: [
-    './src/**/*.{js,ts,jsx,tsx}', // existing
-    '../../packages/**/*.{js,ts,jsx,tsx}', // flow packages
-    '../../node_modules/@literal-ui/core/**/*.js',
-    '../../node_modules/@flow/**/*.{js,ts,jsx,tsx}',
+    './apps/**/*.{js,ts,jsx,tsx}',
+    './packages/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@literal-ui/core/**/*.js',
+    './node_modules/@flow/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {},

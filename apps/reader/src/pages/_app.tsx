@@ -1,4 +1,4 @@
-import './styles.css'
+import '../styles.css'
 import 'react-photo-view/dist/react-photo-view.css'
 
 import { LiteralProvider } from '@literal-ui/core'
@@ -8,6 +8,7 @@ import { useRouter } from 'next/router'
 import { RecoilRoot } from 'recoil'
 
 import { Layout, Theme } from '../components'
+import ForceTailwindInjection from '../force-tailwind-classes'
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter()
@@ -21,6 +22,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <Theme />
           <Layout>
             <Component {...pageProps} />
+            <ForceTailwindInjection />
           </Layout>
         </RecoilRoot>
       </LiteralProvider>
