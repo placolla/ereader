@@ -1,4 +1,4 @@
-import '../styles.css'
+import '../styles.css' // becomes valid only if styles.css is in apps/reader/styles.css
 import 'react-photo-view/dist/react-photo-view.css'
 
 import { LiteralProvider } from '@literal-ui/core'
